@@ -10,12 +10,8 @@ import com.ctk.sdk.PosApiHelper;
 public class ReceiptPrinter {
 
     private static PosApiHelper posApiHelper = PosApiHelper.getInstance();
-
-    public static void printQr(String value){
-        print(value,24);
-    }
-
     static Print_Thread printThread = null;
+
     public static void print(String str,Integer fontSize)
     {
         printThread = new Print_Thread(str, fontSize);
